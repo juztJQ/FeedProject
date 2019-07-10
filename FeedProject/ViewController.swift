@@ -28,6 +28,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tablePost.addSubview(refreshControl)
         self.tablePost.rowHeight = UITableView.automaticDimension
         self.tablePost.estimatedRowHeight = 600
+        nameLabel.text = "Hello Jane"
+        datelabel.text = setDate()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -37,6 +40,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         getData()
         tablePost.refreshControl?.endRefreshing()
         refreshControl.endRefreshing()
+        
+    }
+    
+    func setDate() -> String{
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMM d"
+        return dateFormatter.string(from: date)
         
     }
     

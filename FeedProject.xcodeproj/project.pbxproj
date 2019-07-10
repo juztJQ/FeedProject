@@ -21,6 +21,7 @@
 		D8398FF622D6419200FC8E2C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8398FF522D6419200FC8E2C /* Persistence.swift */; };
 		D8398FFB22D6472A00FC8E2C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8398FF922D6472A00FC8E2C /* PostTableViewCell.swift */; };
 		D8398FFC22D6472A00FC8E2C /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8398FFA22D6472A00FC8E2C /* PostTableViewCell.xib */; };
+		D8398FFE22D6534800FC8E2C /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8398FFD22D6534800FC8E2C /* NewPostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		D8398FF522D6419200FC8E2C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D8398FF922D6472A00FC8E2C /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		D8398FFA22D6472A00FC8E2C /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		D8398FFD22D6534800FC8E2C /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		E3A83279CDBF3A766E3F9147 /* Pods-FeedProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedProjectUITests/Pods-FeedProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 				D8398FCA22D63ACC00FC8E2C /* Assets.xcassets */,
 				D8398FCC22D63ACC00FC8E2C /* LaunchScreen.storyboard */,
 				D8398FCF22D63ACC00FC8E2C /* Info.plist */,
+				D8398FFD22D6534800FC8E2C /* NewPostViewController.swift */,
 			);
 			path = FeedProject;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				D8398FFB22D6472A00FC8E2C /* PostTableViewCell.swift in Sources */,
 				D8398FC622D63ACB00FC8E2C /* ViewController.swift in Sources */,
 				D8398FC422D63ACB00FC8E2C /* AppDelegate.swift in Sources */,
+				D8398FFE22D6534800FC8E2C /* NewPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
