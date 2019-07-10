@@ -23,8 +23,22 @@ class NewPostViewController: UIViewController, UITextViewDelegate, UIImagePicker
         newPostText.delegate = self
         
         imagePicker.delegate = self
-       
+        let rightAddBarButtonItem:UIBarButtonItem = UIBarButtonItem(title: "Share", style: UIBarButtonItem.Style.plain, target: self, action: #selector(NewPostViewController.addTapped))
+        self.navigationItem.setRightBarButtonItems([rightAddBarButtonItem], animated: true)
+        
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func addTapped (sender:UIButton) {
+        shareContent()
+    }
+    
+    func shareContent(){
+        let text = newPostText.text
+        let textShare = [ text ]
+        let activityViewController = UIActivityViewController(activityItems: textShare as [Any] , applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
     @IBAction func addPhotoAction(_ sender: Any) {
