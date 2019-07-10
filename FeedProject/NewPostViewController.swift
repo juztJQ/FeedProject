@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewPostViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate{
+class NewPostViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate , UINavigationControllerDelegate{
 
     @IBOutlet weak var newPostText: UITextView!
     
@@ -21,6 +21,9 @@ class NewPostViewController: UIViewController, UITextViewDelegate, UIImagePicker
     override func viewDidLoad() {
         super.viewDidLoad()
         newPostText.delegate = self
+        
+        imagePicker.delegate = self
+       
         // Do any additional setup after loading the view.
     }
     
@@ -31,7 +34,7 @@ class NewPostViewController: UIViewController, UITextViewDelegate, UIImagePicker
             
             
             imagePicker.sourceType = .savedPhotosAlbum
-            imagePicker.allowsEditing = false
+            imagePicker.allowsEditing = true
             
             present(imagePicker, animated: true, completion: nil)
         }
@@ -50,6 +53,16 @@ class NewPostViewController: UIViewController, UITextViewDelegate, UIImagePicker
         return textView.text.count + (text.count - range.length) <= 150
     }
     
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
+        self.dismiss(animated: true, completion: { () -> Void in
+            
+        })
+        
+        imageSelected.image = image
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
@@ -61,3 +74,5 @@ class NewPostViewController: UIViewController, UITextViewDelegate, UIImagePicker
     */
 
 }
+
+
